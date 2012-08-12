@@ -1,0 +1,84 @@
+/*
+* Navigataur: A pure CSS responsive navigation menu
+* Author: Mike King (@micjamking)
+*/
+
+.menu{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 70px;
+	background: #8a8a8a;
+	box-shadow: inset 0px 3px 5px #808080;
+	border-top: 1px solid #666;
+	width: 100%;
+	z-index: 0;
+	-webkit-transition: all 0.25s linear;
+}
+
+li {
+	list-style: none;
+	margin: 0;
+	width: 100%;
+	
+}
+
+li > a{
+	color: #000000;	
+	font-size: 24px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #adadad;
+}
+
+li:first-child > a{
+	border-top: none;	
+}
+
+li:last-child > a{
+	border-bottom: none;	
+}
+
+li > a:hover, li > a:focus{
+	background: #666;	
+}
+
+.toggle {
+	-webkit-appearance: none;
+	background: #A0A0A0;
+	border: 1px solid #666;
+	border-radius: 5px;
+	box-shadow: 0px 1px 0px #cfcfcf;
+	width: 44px;
+	height: 44px;
+	position: relative;
+	-webkit-transition: all 0.25s linear;
+}
+
+.toggle:checked{
+	background: #777;	
+}
+
+.toggle:after {
+	position: absolute;
+	content: "+";
+	font-size: 42px;
+	color: #fff;
+	top: -7px;
+	left: 5px;
+	-webkit-transition: all 5s linear;
+}
+
+.toggle:checked:after {
+	-webkit-transform: rotate(45deg);
+	-webkit-transform-origin: 50% 57%;
+}
+
+.toggle:checked + .menu {
+	opacity: 1;
+	z-index: -7;
+	-webkit-transition: all 0.25s linear;
+}

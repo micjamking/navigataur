@@ -1,0 +1,7 @@
+# Ignore File Patterns for Navigataur
+
+# OSX
+.DS_Store
+Icon
+._*
+.Spotlight-V100
