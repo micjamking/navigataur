@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" /> 
+	
+	<!-- reset for demo; not recommended :) -->
 	<style>
 		* {
 			margin: 0;
@@ -10,42 +14,17 @@
 
 		body, a{
 			color: #FFFFFF;	
-			font: bold 1em/1.5em 'Helvetica Neue', Verdana, Geneva, sans-serif;	
-		}
-
-		.header{
-			background: #afafaf;
-			padding: 10px 20px;
-			position: relative;
-			z-index: 2;
-			box-shadow: 0px 3px 5px #dfdfdf;
-		}
-
-		h1 {
-			float: left;
-			font-weight: normal;
-			padding: 10px 0 0;		
-		}
-
-		.nav{
-			float: right;
-		}
-
-		.clearfix:before, .clearfix:after{
-			display: table;
-			content: "";
-		}
-
-		.clearfix:after{
-			clear: both;
+			font: bold 16px 'Helvetica Neue', Verdana, Geneva, sans-serif;	
 		}
 	</style>
+	
 	<link rel="stylesheet" href="navigataur.css" />
 </head>
 <body>
 	<div class="container">
 		<div class="header clearfix">
 			<h1>Sexy Logo</h1>
+			
 			<div class="nav">
 				<input type="checkbox" class="toggle" />
 				<ul class="menu">
@@ -54,8 +33,10 @@
 					<li><a href="#">Youtube</a></li>	
 					<li><a href="#">Twitter</a></li>	
 				</ul>
-			</div>
-		</div>
-	</div>
+			</div><!-- End of Navigation -->
+			
+		</div><!-- End of Header -->
+		
+	</div><!-- End of Container -->
 </body>
 </html>
