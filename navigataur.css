@@ -133,7 +133,6 @@
 	}
 	
 	.menu{
-		width: 100%;
 		top: 75px; /* Set to equal height of header (including padding) */
 		background: #788480;
 		border-top: 1px solid #666666;
