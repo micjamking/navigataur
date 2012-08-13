@@ -1,1 +1,1 @@
-Live Demo: https://raw.github.com/micjamking/Navigataur/master/navigataur.css
+Live Demo: http://dev.85pixels.com/wordpress/navigataur-demo/
