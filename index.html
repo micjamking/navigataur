@@ -4,26 +4,56 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" /> 
 	
-	<!-- reset for demo; not recommended :) -->
-	<style>
+	<!-- Demo Styles -->
+	<style type="text/css">
 		* {
 			margin: 0;
 			padding: 0;
 			outline: 0;
 		}
+		
+		html, body{
+			height: 100%;
+			background: url('http://subtlepatterns.com/patterns/brillant.png') repeat;
+		}
 
 		body, a{
-			color: #FFFFFF;	
-			font: bold 16px 'Helvetica Neue', Verdana, Geneva, sans-serif;	
+			font: normal 16px 'Helvetica Neue', Verdana, Geneva, sans-serif;
+			color: #FFFFFF;		
+		}
+		
+		.container{
+			min-height: 100%;
+			height: auto !important;
+			height: 100%;
+			margin: 0 auto -30px;
+		}
+		
+		.container:after{
+			content: '';
+			display: block;
+			height: 30px;
+			clear: both;
+		}
+		
+		.footer{
+			height: 20px;
+			padding: 5px 0;
+			background: #3F3F3F;
+			border-top: 2px solid #1F1F1F;
+			font-size: 12px;
+			text-align: center;
+			text-shadow: 1px 1px 1px #111111;
 		}
 	</style>
 	
 	<link rel="stylesheet" href="navigataur.css" />
+	<title>Navigataur</title>
 </head>
 <body>
 	<div class="container">
 		<div class="header clearfix">
-			<h1>Sexy Logo</h1>
+			<h1>Navigataur</h1>
 			
 			<div class="nav">
 				<input type="checkbox" class="toggle" />
@@ -38,5 +68,9 @@
 		</div><!-- End of Header -->
 		
 	</div><!-- End of Container -->
+	
+	<div class="footer">
+		<p>&copy; 2012 Navigataur CSS Plugin | Created by Mike King</p>
+	</div>
 </body>
 </html>
