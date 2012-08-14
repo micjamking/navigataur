@@ -35,7 +35,7 @@ That's it! Everything will works out of the box with this setup. However, like a
 ---------------------------------*/
 ```
 
-##FYI
+##Details
 * This plugin was created in response to [Menutron](https://github.com/micjamking/Menutron), a jquery plugin I created for responsive navigation menus. While I menutron is more functional as it provides access to native navigation controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with a more control over the styling.
 * If you have any suggestions, comments, or creative insults for my code, [add an issue](https://github.com/micjamking/Navigataur/issues/new) or [fork the repo](https://github.com/micjamking/Navigataur/fork_select).
 
