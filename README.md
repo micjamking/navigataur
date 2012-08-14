@@ -5,7 +5,7 @@
 
 
 ##Demo
-Live Demo: http://micjamking.github.com/navigataur/demo
+Live Demo: http://micjamking.github.com/Navigataur/demo
 
 
 
