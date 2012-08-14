@@ -1,7 +1,7 @@
 #Navigataur.css
 *A pure CSS responsive navigation menu*
 
-`navigataur.css` is a pure css plugin for sexy, responsive navigation menus. The plugin takes an ordinary 
+`navigataur.css` is a pure css plugin for sexy, responsive navigation menus. 
 
 
 ##Demo
