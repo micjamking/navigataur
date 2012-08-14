@@ -38,32 +38,51 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>Navigataur.css</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><em>A pure CSS responsive navigation menu</em></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p><code>navigataur.css</code> is a pure css plugin for sexy, responsive navigation menus. The plugin takes an ordinary </p>
+
+<h2>Demo</h2>
+
+<p>Live Demo: <a href="http://micjamking.github.com/navigataur/demo">http://micjamking.github.com/navigataur/demo</a></p>
+
+<h2>Usage</h2>
+
+<p>To use <code>navigataur.css</code>, reference the stylesheet in the <code>&lt;head&gt;</code> of your document (or you can place within your own stylesheet).</p>
+
+<p>To work out of the box, you will need the following adjustments to your markup:</p>
+
+<ul>
+<li>A top <code>&lt;div&gt;</code> with a class of <code>header</code> (can be changed in the stylesheet if you use something different)</li>
+<li>An <code>input[type=checkbox]</code> with a class of <code>toggle</code> just above your list menu. </li>
+<li>A list menu (either ul or ol) with a class of <code>menu</code>
+</li>
+</ul><pre><code>&lt;input type='checkbox' class='toggle' /&gt;
+&lt;ul class="menu"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Google&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;     
+  &lt;li&gt;&lt;a href="#"&gt;Youtube&lt;/a&gt;&lt;/li&gt;  
+  &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;  
+&lt;/ul&gt;
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>That's it! Everything will works out of the box with this setup. However, like any CSS plugin/snippet, you will probably want to stylize it to match your sites theme. I've separated all functional CSS from the presentational CSS so you can jump write in and change everything you need without breaking the plugin. Just edit to your hearts desire below the following comment in the CSS</p>
 
-<h3>Designer Templates</h3>
+<pre><code>/*--------------------------------
+ Presentation Styles (Editable)
+---------------------------------*/
+</code></pre>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>FYI</h2>
 
-<h3>Rather Drive Stick?</h3>
+<ul>
+<li>This plugin was created in response to <a href="https://github.com/micjamking/Menutron">Menutron</a>, a jquery plugin I created for responsive navigation menus. While I menutron is more functional as it provides access to native navigation controls on mobile devices, <code>&lt;select&gt;</code> controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with a more control over the styling.</li>
+<li>If you have any suggestions, comments, or creative insults for my code, <a href="https://github.com/micjamking/Navigataur/issues/new">add an issue</a> or <a href="https://github.com/micjamking/Navigataur/fork_select">fork the repo</a>.</li>
+</ul><h2>Copyright</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Copyright (c) 2012 Mike King (<a href="https://github.com/micjamking" class="user-mention">@micjamking</a>)</p>
       </section>
 
     </div>
