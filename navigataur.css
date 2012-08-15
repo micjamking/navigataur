@@ -19,7 +19,7 @@
 ---------------------------------*/
 .header { position: relative; }
 .toggle { display: none; }
-.menu > li { list-style: none; display: inline;	}
+.menu > li { list-style: none; float:left;	}
 
 /* Nicolas Gallagher micro clearfix */
 .clearfix:before, .clearfix:after { display: table; content: ""; }
@@ -63,7 +63,6 @@
 	-moz-box-sizing: border-box; 
 	box-sizing: border-box;
 	height: 100%;
-	margin: 0 -2px; 
 	padding: 23px 20px 30px;
 	background: none;
 	font-weight: normal;
