@@ -33,15 +33,16 @@ That's it! Everything works out of the box with this setup. However, like any CS
 ```
 
 ##Support
-The plugin functions well in most _modern_ browsers; however, there are inconsistencies between the default rendering of `input[type=checkbox]` controls and the ability to apply custom styles to it.
+The plugin functions well in most _modern_ browsers; however, there are inconsistencies between the default rendering of `input[type=checkbox]` controls and the ability to apply custom styles to it. WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Android, Nokia), so you can expect the same level of support for mobile browsing as you see in Chrome/Safari.
 
 * Google Chrome (any)
 * Safari (3.0+)
-* Firefox (any; however, `input[type=checkbox]` still renders native control and can't be fully styled )
-* Opera (12; no support for :after pseudo element, `input[type=checkbox]` renders native control for `:checked` state)
-* *IE 6+  (just kidding; this plugin fails horribly below IE 10)
+* Firefox (any)*
+* Opera (12)**
+* IE 9*
 
-*Something to note; WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Android, Nokia), so you can expect the same level of support for mobile browsing as you see in Chrome/Safari
+*`input[type=checkbox]` still renders native control (even with `appearance:none` declaration) and can't be fully styled
+**`input[type=checkbox]` renders native control for `:checked` state, but background can be styled
 
 ##Details
 * This plugin was created in response to [Menutron](https://github.com/micjamking/Menutron), a jquery plugin I created for responsive navigation menus. While I menutron is more functional as it provides access to native navigation controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with a more control over the styling.
