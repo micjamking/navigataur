@@ -33,7 +33,7 @@ That's it! Everything works out of the box with this setup. However, like any CS
 ```
 
 ##Support
-This plugin is currently supported in the following browsers; however, there are some inconsistencies between the default rendering of `input[type=checkbox]` controls and the ability to apply custom styles to it.
+The plugin functions well in most _modern_ browsers; however, there are inconsistencies between the default rendering of `input[type=checkbox]` controls and the ability to apply custom styles to it.
 
 * Google Chrome (any)
 * Safari (3.0+)
