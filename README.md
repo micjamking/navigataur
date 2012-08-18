@@ -45,7 +45,7 @@ The plugin functions well in most _modern_ browsers; however, there are inconsis
 **`input[type=checkbox]` renders native control for `:checked` state, but background can be styled
 
 ##Details
-* This plugin was created in response to [Menutron](https://github.com/micjamking/Menutron), a jquery plugin I created for responsive navigation menus. While I menutron is more functional as it provides access to native navigation controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with a more control over the styling.
+* This plugin was created in response to [Menutron](https://github.com/micjamking/Menutron), a jquery plugin for responsive navigation menus. While I believe Menutron is more functional, as it provides access to native picker controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with more control over the styling.
 * If you have any suggestions, comments, or creative insults for my code, [add an issue](https://github.com/micjamking/Navigataur/issues/new) or [fork the repo](https://github.com/micjamking/Navigataur/fork_select).
 
 
