@@ -10,7 +10,7 @@
 	  a different breakpoint for your navigation.
 	  
 	- Anchor tags in list items have box-sizing: border-box style property to allow
-      padding inside the container without conflicting with layout.	
+      	  padding inside the container without conflicting with layout.	
 
 */
 
@@ -19,7 +19,7 @@
 ---------------------------------*/
 .header { position: relative; }
 .toggle { display: none; }
-.menu > li { list-style: none; float:left;	}
+.menu > li { list-style: none; float:left; }
 
 /* Nicolas Gallagher micro clearfix */
 .clearfix:before, .clearfix:after { display: table; content: ""; }
