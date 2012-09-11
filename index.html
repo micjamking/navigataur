@@ -1,92 +1,76 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Navigataur by micjamking</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" /> 
+	
+	<!-- Demo Styles -->
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			outline: 0;
+		}
+		
+		html, body{
+			height: 100%;
+			background: url('http://subtlepatterns.com/patterns/brillant.png') repeat;
+		}
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/micjamking/Navigataur">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/micjamking/Navigataur/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/micjamking/Navigataur/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Navigataur</h1>
-          <p>A pure CSS responsive navigation menu</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/micjamking">micjamking</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1>Navigataur.css</h1>
-
-<p><em>A pure CSS responsive navigation menu</em></p>
-
-<p><code>navigataur.css</code> is a pure css plugin for sexy, responsive navigation menus. The plugin takes an ordinary </p>
-
-<h2>Demo</h2>
-
-<p>Live Demo: <a href="http://micjamking.github.com/navigataur/demo">http://micjamking.github.com/navigataur/demo</a></p>
-
-<h2>Usage</h2>
-
-<p>To use <code>navigataur.css</code>, reference the stylesheet in the <code>&lt;head&gt;</code> of your document (or you can place within your own stylesheet).</p>
-
-<p>To work out of the box, you will need the following adjustments to your markup:</p>
-
-<ul>
-<li>A top <code>&lt;div&gt;</code> with a class of <code>header</code> (can be changed in the stylesheet if you use something different)</li>
-<li>An <code>input[type=checkbox]</code> with a class of <code>toggle</code> just above your list menu. </li>
-<li>A list menu (either ul or ol) with a class of <code>menu</code>
-</li>
-</ul><pre><code>&lt;input type='checkbox' class='toggle' /&gt;
-&lt;ul class="menu"&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Google&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;     
-  &lt;li&gt;&lt;a href="#"&gt;Youtube&lt;/a&gt;&lt;/li&gt;  
-  &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;  
-&lt;/ul&gt;
-</code></pre>
-
-<p>That's it! Everything will works out of the box with this setup. However, like any CSS plugin/snippet, you will probably want to stylize it to match your sites theme. I've separated all functional CSS from the presentational CSS so you can jump write in and change everything you need without breaking the plugin. Just edit to your hearts desire below the following comment in the CSS</p>
-
-<pre><code>/*--------------------------------
- Presentation Styles (Editable)
----------------------------------*/
-</code></pre>
-
-<h2>FYI</h2>
-
-<ul>
-<li>This plugin was created in response to <a href="https://github.com/micjamking/Menutron">Menutron</a>, a jquery plugin I created for responsive navigation menus. While I menutron is more functional as it provides access to native navigation controls on mobile devices, <code>&lt;select&gt;</code> controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with a more control over the styling.</li>
-<li>If you have any suggestions, comments, or creative insults for my code, <a href="https://github.com/micjamking/Navigataur/issues/new">add an issue</a> or <a href="https://github.com/micjamking/Navigataur/fork_select">fork the repo</a>.</li>
-</ul><h2>Copyright</h2>
-
-<p>Copyright (c) 2012 Mike King (<a href="https://github.com/micjamking" class="user-mention">@micjamking</a>)</p>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+		body, a{
+			font: normal 16px Helvetica, Verdana, Geneva, sans-serif;
+			color: #FFFFFF;		
+		}
+		
+		.container{
+			min-height: 100%;
+			height: auto !important;
+			height: 100%;
+			margin: 0 auto -30px;
+		}
+		
+		.container:after{
+			content: '';
+			display: block;
+			height: 30px;
+			clear: both;
+		}
+		
+		.footer{
+			height: 20px;
+			padding: 5px 0;
+			background: #3F3F3F;
+			border-top: 2px solid #1F1F1F;
+			font-size: 12px;
+			text-align: center;
+			text-shadow: 1px 1px 1px #111111;
+		}
+	</style>
+	
+	<link rel="stylesheet" href="navigataur.css" />
+	<title>Navigataur</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header clearfix">
+			<h1>Navigataur</h1>
+			
+			<div class="nav">
+				<input type="checkbox" class="toggle" />
+				<ul class="menu">
+					<li><a href="#">Google</a></li>
+					<li><a href="#">Facebook</a></li>		
+					<li><a href="#">Youtube</a></li>	
+					<li><a href="#">Twitter</a></li>	
+				</ul>
+			</div><!-- End of Navigation -->
+			
+		</div><!-- End of Header -->
+		
+	</div><!-- End of Container -->
+	
+	<div class="footer">
+		<p>&copy; 2012 Navigataur CSS Plugin | Created by Mike King</p>
+	</div>
+</body>
 </html>
