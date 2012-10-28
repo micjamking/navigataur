@@ -3,7 +3,7 @@
 
 
 ##Demo
-Live Demo: http://micjamking.github.com/Navigataur/demo
+Live Demo: http://micjamking.github.com/Navigataur/
 
 
 ##Usage
