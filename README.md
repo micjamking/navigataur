@@ -34,7 +34,7 @@ That's it! Everything works out of the box with this setup. However, like any CS
 ```
 
 ##Support
-The plugin functions well in most _modern_ browsers; however, there are inconsistencies between the default rendering of `input[type=checkbox]` controls and the ability to apply custom styles to it. WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Android, Nokia), so you can expect the same level of support for mobile browsing as you see in Chrome/Safari.
+WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Android, Nokia), so you can expect the same level of support for mobile browsing as you see in Chrome/Safari.
 
 * Chrome 16.0+
 * Safari 5.1+
