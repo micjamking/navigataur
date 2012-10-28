@@ -6,19 +6,20 @@
 /*
  	Notes:
  
- 	- Media queries be should be edited in both style sections if you require 
+ 	- Media queries should be edited in both style sections if you require 
 	  a different breakpoint for your navigation.
 	  
-	- Anchor tags in list items have box-sizing: border-box style property to allow
-      padding inside the container without conflicting with layout.	
+	- Toggle class & menu anchor tags in list items have box-sizing: border-box 
+	  style property to allow padding inside the container without conflicting with layout.	
 
 */
+
 
 /*--------------------------------
  Functional Styles (Required)
 ---------------------------------*/
 .header { position: relative; }
-.toggle { display: none; }
+#toggle, .toggle { display: none; }
 .menu > li { list-style: none; float:left;	}
 
 /* Nicolas Gallagher micro clearfix */
@@ -29,45 +30,49 @@
 	.menu { opacity: 0; width: 100%; position: absolute; right: 0; }
 	.menu > li { display: block; width: 100%; margin: 0; }
 	.menu > li > a { display: block; width: 100%; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-	.toggle { display: block; position: relative; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-	.toggle:after { position: absolute; }
-	.toggle:checked + .menu { opacity: 1; }
+	.toggle { display: block; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+	#toggle:checked ~ .menu { opacity: 1;}
 }
+
 
 /*--------------------------------
  Presentation Styles (Editable)
 ---------------------------------*/
-
 .header{
-	height: 55px;
-	padding: 10px 20px;
-	background: #363636;
-	border-bottom: 2px solid #1F1F1F;
-	box-shadow: 0px 3px 5px #DFDFDF;
+	min-height: 100px;
+	height: 100%;
+	padding: 0 20px;
+	background: #FFFFFF;
 }
 
 .header > h1 {
 	float: left;
-	padding: 7px 0 0;
-	text-shadow: 1px 1px 1px #111111;
-	font-weight: normal;		
+	padding: 30px 0 0;		
+	font-style: italic;
+	font-family: Georgia;
+	font-size: 28px;
+	color: #DFDFDF;
 }
 
-.nav{
-	float: right;
-	margin: 15px 0 0;
+.nav{ 
+	display: block; 
+	float: right; 
+}
+
+.nav, .menu, .menu > li, .menu > li > a{ 
+	height: 100%; 
 }
 
 .menu > li > a{
+	display: block;
+	padding: 42px 20px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box; 
 	box-sizing: border-box;
-	height: 100%;
-	padding: 23px 20px 30px;
-	background: none;
-	font-weight: normal;
-	text-decoration: none;
-	text-shadow: 1px 1px 1px #111111;
 	-webkit-transition: all 0.25s linear;
 	-moz-transition: all 0.25s linear;
 	-o-transition: all 0.25s linear;
@@ -75,111 +80,74 @@
 }
 
 .menu > li > a:hover, .menu > li > a:focus{
-	background: #3F3F3F;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3F3F3F), to(#363636));
-	background-image: -webkit-linear-gradient(top, #3F3F3F, #363636);
-	background-image: -moz-linear-gradient(top, #3F3F3F, #363636);
-	background-image: -ms-linear-gradient(top, #3F3F3F, #363636);
-	background-image: -o-linear-gradient(top, #3F3F3F, #363636);
-	background-image: linear-gradient(top, #3F3F3F, #363636);
-	background-repeat: repeat-x;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3F3F3F', endColorstr='#363636', GradientType=0);
-	border-top: 3px solid #4BB1DD;
+	background: #F2F2F2;
+	box-shadow: inset 0px 5px #51C1F1;
+	color: #51C1F1;
+	padding: 50px 20px 34px;
+}
+
+.toggle{ 
+	z-index: 2; 
 }
 
 @media only screen and (max-width: 768px){
-	.nav{
-		margin: 0;	
+	.menu{
+		background: #FFFFFF;
+		border-top: 1px solid #51C1F1;
 	}
 	
-	.menu{
-		top: 75px; /* Set to equal height of header (including padding) */
-		background: #2F2F2F;
-		border-top: 2px solid #1F1F1F;
-		-webkit-box-shadow: inset 0px 3px 5px #2D2D2D;
-		box-shadow: inset 0px 3px 5px #2D2D2D;
+	.menu, .menu > li, .menu > li > a{
+		height: auto;
 	}
 	
 	.menu > li > a{
-		padding: 10px;
-		margin: 0;
-		background: none;
-		border: none;
-		border-top: 1px solid #3F3F3F !important;
-		border-bottom: 1px solid #1F1F1F !important;
-		border-radius: 0;
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		box-shadow: none;
-		font-size: 24px;
-	}
-	
-	.menu > li:first-child > a{
-		border-top: none !important;	
-	}
-	
-	.menu > li:last-child > a{
-		border-bottom: none !important;	
+		padding: 15px 15px;
 	}
 	
 	.menu > li > a:hover, .menu > li > a:focus{
-		background: #2A2A2A;
-		background-image: none;
-		border-left: 3px solid #4BB1DD;
-		padding-left: 15px;
-	}
-	
-	.toggle {
-		width: 44px;
-		height: 44px;
-		margin: 5px 0 0;
-		background: #3F3F3F;
-		border: 1px solid #000000;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
-		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
-		-webkit-transition: all 0.25s linear;
-		-moz-transition: all 0.25s linear;
-		-o-transition: all 0.25s linear;
-		transition: all 0.25s linear;
-	}
-	
-	.toggle:checked{
-		background: #2F2F2F;	
+		background: #F2F2F2;
+		box-shadow: inset 5px 0px #51C1F1;
+		padding: 15px 15px 15px 25px;
 	}
 	
 	.toggle:after {
-		content: "+";
-		top: -7px;
-		left: 5px;
-		font-size: 42px;
+		content: 'Main Menu';
+		display: block;
+		width: 200px;
+		margin: 33px 0;
+		padding: 10px 50px;
+		background: #51C1F1;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		text-align: center;
+		font-size: 12px;
 		color: #FFFFFF;
-		-webkit-transition: all 0.25s linear;
-		-moz-transition: all 0.25s linear;
-		-o-transition: all 0.25s linear;
-		transition: all 0.25s linear;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
 	}
 	
-	.toggle:checked:after {
-		color: #4BB1DD;
-		-webkit-transform: rotate(45deg);
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
-		-o-transform: rotate(45deg);
-		transform: rotate(45deg);
-		-webkit-transform-origin: 50% 57%;
-		-moz-transform-origin: 50% 57%;
-		-ms-transform-origin: 50% 57%;
-		-o-transform-origin: 50% 57%;
-		transform-origin: 50% 57%;
+	.toggle:hover:after{
+		background: #45ABD6;
 	}
 	
-	.toggle:checked + .menu {
-		-webkit-transition: opacity 0.25s linear;
-		-moz-transition: opacity 0.25s linear;
-		-o-transition: opacity 0.25s linear;
-		transition: opacity 0.25s linear;
+	#toggle:checked + .toggle:after{
+		content: 'Close Menu';
+	}
+}
+
+@media only screen and (max-width: 479px){
+	.header > h1 { 
+		text-align: center;
+	}
+	.header > h1, .nav, .toggle:after{ 
+		float: none; 
+	}
+	.toggle:after { 
+		text-align: center; width: 100%; 
 	}
 }
