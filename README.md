@@ -43,7 +43,7 @@ WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Andr
 * iOS (4.0)
 * Android (2.2)
 
-* Internet Explorer 8 and below do not support media queries. If you need support for legacy IE versions, you can use an [IE specific stylesheet](http://css-tricks.com/how-to-create-an-ie-only-stylesheet/) to provide some styling support.
+**Internet Explorer 8 and below do not support media queries. If you need support for legacy IE versions, you can use an [IE specific stylesheet](http://css-tricks.com/how-to-create-an-ie-only-stylesheet/) to provide some styling support.*
 
 
 ##Details
