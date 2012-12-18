@@ -31,11 +31,11 @@ body{ -webkit-animation: bugfix infinite 1s; }
 .clearfix:after { clear: both; }
 
 @media only screen and (max-width: 768px){
-	.menu { opacity: 0; width: 100%; position: absolute; right: 0; }
+	.menu { display: none; opacity: 0; width: 100%; position: absolute; right: 0; }
 	.menu > li { display: block; width: 100%; margin: 0; }
 	.menu > li > a { display: block; width: 100%; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 	.toggle { display: block; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
-	#toggle:checked ~ .menu { opacity: 1;}
+	#toggle:checked ~ .menu { display: block; opacity: 1;}
 }
 
 
