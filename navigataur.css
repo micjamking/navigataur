@@ -115,7 +115,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	}
 	
 	.toggle:after {
-		content: 'Main Menu';
+		content: attr(data-open);
 		display: block;
 		width: 200px;
 		margin: 33px 0;
@@ -140,7 +140,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	}
 	
 	#toggle:checked + .toggle:after{
-		content: 'Close Menu';
+		content: attr(data-close);
 	}
 }
 
