@@ -11,12 +11,13 @@ To use `navigataur.css`, reference the stylesheet in the `<head>` of your docume
 
 To work out of the box, you will need to make the following adjustments to your markup (classes can be changed in the stylesheet if you use something different):
 * An outer `<div>` with a class of `header` 
-* An `input[type=checkbox]` with an ID of `toggle` and `label[for=toggle]` with a class of `toggle` and an `onclick` attribute just above your list menu. 
+* An `input[type=checkbox]` with an ID of `toggle` and a `label[for=toggle]` with a class of `toggle` and an `onclick` attribute just above your list menu.
+* The label also requires two data attributes for displaying the menu open/close text, allowing for complete localisation.
 * A list menu (either ul or ol) with a class of `menu`
 
 ```
 <input type="checkbox" id="toggle" />
-<label for="toggle" class="toggle" onclick></label>
+<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick></label>
 <ul class="menu">
   <li><a href="#">Google</a></li>
   <li><a href="#">Facebook</a></li>		
