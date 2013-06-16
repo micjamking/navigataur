@@ -53,4 +53,4 @@ WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Andr
 
 
 ##Copyright
-Copyright (c) 2012 Mike King (@micjamking)
+[BSD license](http://opensource.org/licenses/bsd-license.php) Copyright (c) 2012 Mike King (@micjamking)
