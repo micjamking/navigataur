@@ -18,9 +18,6 @@
 /*--------------------------------
  Functional Styles (Required)
 ---------------------------------*/
-/* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
-body{ -webkit-animation: bugfix infinite 1s; }
-@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
 
 .header { position: relative; }
 #toggle, .toggle { display: none; }
@@ -35,7 +32,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 	.menu > li { display: block; width: 100%; margin: 0; }
 	.menu > li > a { display: block; width: 100%; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 	.toggle { display: block; position: relative; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
-	#toggle:checked ~ .menu { display: block; opacity: 1;}
+	#toggle:checked + div .menu { display: block; opacity: 1;}
 }
 
 
@@ -139,7 +136,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
 		background: #45ABD6;
 	}
 	
-	#toggle:checked + .toggle:after{
+	#toggle:checked + div .toggle:after{
 		content: attr(data-close);
 	}
 }
