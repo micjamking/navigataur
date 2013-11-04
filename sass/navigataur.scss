@@ -1,0 +1,195 @@
+// ----------
+// Variables, edit as desired
+// ----------
+$primary_color:     #51C1F1;
+$background_color:  #FFF;
+$break_tablet:      768px;
+$break_mobile:      479px;
+
+@mixin box-sizing($value) {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing:    $value;
+    -ms-box-sizing:     $value;
+    -o-box-sizing:      $value;
+    box-sizing:         $value;
+}
+
+@mixin transition($value) {
+    -webkit-transition: $value;
+    -moz-transition:    $value;
+    -ms-transition:     $value;
+    -o-transition:      $value;
+    transition:         $value;
+}
+
+// ----------
+// Functional Styling, Required
+// ----------
+
+.clearfix { // Nicolas Gallagher micro clearfix
+    &::before, &::after {
+        content: "";
+        display: table;
+    }
+}
+
+.header { position: relative; }
+#toggle, .toggle { display: none; }
+
+.menu {
+    > li {
+        float: left;
+        list-style: none;
+    }
+}
+
+@media only screen and (max-width: $break_tablet) {
+    .menu {
+        display: none;
+        opacity: 0;
+        position: absolute;
+            right: 0;
+        width: 100%;
+
+        > li {
+            display: block;
+            margin: 0;
+            width: 100%;
+
+            > a {
+                @include box-sizing(border-box);
+                display: block;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+    }
+    .toggle {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    #toggle:checked + nav .menu {
+        display: block;
+        opacity: 1;
+    }
+}
+
+// ----------
+// Presentational Styles, edit as desired.
+// ----------
+
+.header {
+    background: $background_color;
+    min-height: 100px;
+    padding: 0 20px;
+
+    > h1 {
+        color: #dfdfdf;
+        float: left;
+        font-family: Georgia, sans-serif;
+        font-size: 28px;
+        font-style: italic;
+        padding: 30px 0 0;
+    }
+}
+
+nav {
+    display: block;
+    float: right;
+}
+
+nav,
+.menu,
+.menu > li,
+.menu > li > a {
+    height: 100%;
+}
+
+.menu {
+    > li > a {
+        @include box-sizing(border-box);
+        @include transition(all 250ms linear);
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1;
+        padding: 42px 20px;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            background: darken($background_color, 5%);
+            box-shadow: inset 0px 5px $primary_color;
+            color: $primary_color;
+            padding: 50px 20px 34px;
+        }
+    }
+}
+
+.toggle {
+    z-index: 2;
+}
+
+@media only screen and (max-width: $break_tablet){
+    .menu,
+    .menu > li,
+    .menu > li > a{
+        height: auto;
+    }
+
+    .menu {
+        background: $background_color;
+        border-top: 1px solid $primary_color;
+
+        > li > a {
+            padding: 15px 15px;
+
+            &:hover, &:focus {
+                background: darken($background_color, 5%);
+                box-shadow: inset 5px 0px $primary_color;
+                padding: 15px 15px 15px 25px;
+            }
+        }
+    }
+
+    .toggle {
+        &:hover::after {
+            background: darken($primary_color, 5%);
+        }
+        &::after {
+            @include transition(all 500ms linear);
+            @include box-sizing(border-box);
+            background: $primary_color;
+            color: #FFFFFF;
+            content: attr(data-open);
+            display: block;
+            font-size: 12px;
+            width: 200px;
+            margin: 33px 0;
+            padding: 10px 50px;
+            text-align: center;
+
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+        }
+    }
+    #toggle:checked + nav .toggle::after {
+        content: attr(data-close);
+    }
+}
+
+@media only screen and (max-width: $break_mobile){
+    .header > h1, nav, .toggle::after{
+        float: none;
+    }
+    .header > h1 {
+        text-align: center;
+    }
+    .toggle::after {
+        text-align: center;
+        width: 100%;
+    }
+}
