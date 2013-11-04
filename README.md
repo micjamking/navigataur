@@ -5,6 +5,8 @@
 ##Demo
 Live Demo: http://micjamking.github.com/Navigataur/
 
+## Compiling
+Navigataur ships with an SCSS version, as well as a CSS version compiled from the SCSS version. To compile the SCSS version on your machine, you need to have both [Ruby][1] &amp; [Sass][2] installed
 
 ##Usage
 To use `navigataur.css`, reference the stylesheet in the `<head>` of your document (or you can place within your own stylesheet).
@@ -15,7 +17,7 @@ To work out of the box, you will need to make the following adjustments to your 
 * The label also requires two data attributes for displaying the menu open/close text, allowing for complete localisation.
 * A list menu (either ul or ol) with a class of `menu`, followed by the closing `div`
 
-```
+``` html
 <input type="checkbox" id="toggle">
 <nav role="navigation">
 	<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" aria-hidden="true" onclick></label>
@@ -47,13 +49,22 @@ WebKit rendering engine makes up the vast majority of mobile browsers (iOS, Andr
 * iOS 4.0+
 * Android 2.3+
 
-*Internet Explorer 8 and below do not support media queries. If you need support for legacy IE versions, you can use an [IE specific stylesheet](http://css-tricks.com/how-to-create-an-ie-only-stylesheet/) to provide some styling support.*
+*Internet Explorer 8 and below do not support media queries. If you need support for legacy IE versions, you can use an [IE specific stylesheet][3] to provide some styling support.*
 
 
 ##Details
-* This plugin was created in response to [Menutron](https://github.com/micjamking/Menutron), a jquery plugin for responsive navigation menus. While I believe Menutron is more functional, as it provides access to native picker controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with more control over the styling.
-* If you have any suggestions, comments, or creative insults for my code, [add an issue](https://github.com/micjamking/Navigataur/issues/new) or [fork the repo](https://github.com/micjamking/Navigataur/fork_select).
+* This plugin was created in response to [Menutron][4], a jquery plugin for responsive navigation menus. While I believe Menutron is more functional, as it provides access to native picker controls on mobile devices, `<select>` controls are not very attractive. Navigataur.css is for those that want the same responsive capabilities, but with more control over the styling.
+* If you have any suggestions, comments, or creative insults for my code, [add an issue][5] or [fork the repo][6].
 
 
 ##Copyright
-[BSD license](http://opensource.org/licenses/bsd-license.php) Copyright (c) 2012 Mike King ([@micjamking](http://twitter.com/micjamking))
+[BSD license][7] Copyright (c) 2012 Mike King ([@micjamking][8])
+
+[1]: https://www.ruby-lang.org/
+[2]: http://www.sass-lang.com/
+[3]: http://css-tricks.com/how-to-create-an-ie-only-stylesheet/
+[4]: https://github.com/micjamking/Menutron
+[5]: https://github.com/micjamking/Navigataur/issues/new
+[6]: https://github.com/micjamking/Navigataur/fork_select
+[7]: http://opensource.org/licenses/bsd-license.php
+[8]: https://twitter.com/micjamking
