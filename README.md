@@ -6,7 +6,12 @@
 Live Demo: http://micjamking.github.com/Navigataur/
 
 ## Compiling
-Navigataur ships with an SCSS version, as well as a CSS version compiled from the SCSS version. To compile the SCSS version on your machine, you need to have both [Ruby][1] &amp; [Sass][2] installed
+Navigataur ships with an SCSS version, as well as a CSS version compiled from the SCSS version. To compile the SCSS version on your machine, you need to have both [Ruby][1] &amp; [Sass][2] installed. Once installed you can compile by using the following commands:
+
+```
+$ cd navigataur_directory
+$ compass compile
+```
 
 ##Usage
 To use `navigataur.css`, reference the stylesheet in the `<head>` of your document (or you can place within your own stylesheet).
